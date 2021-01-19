@@ -23,8 +23,12 @@ function Home() {
             <Link href="/sobre">
                 <a>Sobre</a>
             </Link>
+
+            <Link href="/services">
+                <a>Serviços</a>
+            </Link>
         </div>
-        
+
         </>
     );
 }
