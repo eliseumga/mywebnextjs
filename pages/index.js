@@ -20,13 +20,13 @@ function Home() {
         <div>
             <h1>Home</h1>
 
-            <Link href="/sobre">
-                <a>Sobre</a>
+            <Link>
+                <lu>
+                    <li><a href="/sobre">Sobre</a></li>
+                    <li><a href="/services">Serviços</a></li>
+                </lu>
             </Link>
 
-            <Link href="/services">
-                <a>Serviços</a>
-            </Link>
         </div>
 
         </>
