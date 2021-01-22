@@ -1,7 +1,10 @@
-export default (req, res) => {
-    res.json({message: 'hello Eliseu'});
-}
+import initDB from '../../helpers/initDB';
+import Product from '../../models/Product';
 
-//app.get('/api/test', (req, res) => {
-//    res.json({message: 'hello Eliseu'})
-//});
+initDB();
+
+export default (req, res) => {
+    Product.find().then(products=>{
+        res.status(200).json(products)
+    })
+}
