@@ -1,36 +1,15 @@
-import Router from 'next/router';
 import Link from 'next/link';
-import Head from 'next/head';
-import NProgress from 'nprogress';
 
-Router.events.on('routeChangeStart', (url) => {
-    NProgress.start();
-});
-
-Router.events.on('routerChangeComplete', () => NProgress.done());
-Router.events.on('routeChangeError', () => NProgress.done());
-
-function Home() {
-    return (
-        <>
-        <Head>
-            <link rel="stylesheet" type="text/css" href="/public/nprogress.css" />
-        </Head>
-
-        <div>
-            <h1>Home</h1>
-
-            <Link>
-                <lu>
-                    <li><a href="/sobre">Sobre</a></li>
-                    <li><a href="/services">Serviços</a></li>
-                </lu>
-            </Link>
-
-        </div>
-
-        </>
-    );
+const Home = (prop) => {
+  return (
+    <div>
+      <h1>Next</h1>
+      <h2>Message: {prop.message}</h2>
+      <Link href='/product'>Produtos</Link>
+    </div>
+  )  
 }
 
 export default Home;
+
+//https://www.youtube.com/watch?v=n47Y5-hSFSs&list=PLB97yPrFwo5jmtx3ClYFHvMLUMyx9qfnV
